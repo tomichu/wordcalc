@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @gw_calculation.course %>
+</p>
+
+<p>
+<font color=red>
+  <strong>GW Hours:</strong>
+  <%= @gw_calculation.gw_hours %>
+</font>
+</p>
+<p>
+  <strong>Mon:</strong>
+  <%= @gw_calculation.mon %>
+</p>
+
+<p>
+  <strong>Tue:</strong>
+  <%= @gw_calculation.tue %>
+</p>
+
+<p>
+  <strong>Wed:</strong>
+  <%= @gw_calculation.wed %>
+</p>
+
+<p>
+  <strong>Thr:</strong>
+  <%= @gw_calculation.thr %>
+</p>
+
+<p>
+  <strong>Fri:</strong>
+  <%= @gw_calculation.fri %>
+</p>
+
+<%= link_to 'Edit', edit_gw_calculation_path(@gw_calculation) %> |
+<%= link_to 'Back', gw_calculations_path %>

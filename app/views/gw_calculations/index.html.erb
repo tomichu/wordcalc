@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gw Calculations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thr</th>
+      <th>Fri</th>
+			<th>
+			<font color=red>
+				Sum
+			</font>
+			</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gw_calculations.each do |gw_calculation| %>
+      <tr>
+        <td><%= gw_calculation.course %></td>
+        <td><%= gw_calculation.mon %></td>
+        <td><%= gw_calculation.tue %></td>
+        <td><%= gw_calculation.wed %></td>
+        <td><%= gw_calculation.thr %></td>
+        <td><%= gw_calculation.fri %></td>
+				<td>
+					<font color=red>
+					<%= gw_calculation.gw_hours %>
+				</font>
+				</td>
+
+        <td><%= link_to 'Show', gw_calculation %></td>
+        <td><%= link_to 'Edit', edit_gw_calculation_path(gw_calculation) %></td>
+        <td><%= link_to 'Destroy', gw_calculation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gw Calculation', new_gw_calculation_path %>

@@ -1,0 +1,47 @@
+<%= form_for(gw_calculation) do |f| %>
+  <% if gw_calculation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gw_calculation.errors.count, "error") %> prohibited this gw_calculation from being saved:</h2>
+
+      <ul>
+      <% gw_calculation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course %>
+    <%= f.text_field :course %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mon %>
+    <%= f.number_field :mon %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tue %>
+    <%= f.number_field :tue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wed %>
+    <%= f.number_field :wed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thr %>
+    <%= f.number_field :thr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fri %>
+    <%= f.number_field :fri %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: MyString
+  mon: 1
+  tue: 1
+  wed: 1
+  thr: 1
+  fri: 1
+
+two:
+  course: MyString
+  mon: 1
+  tue: 1
+  wed: 1
+  thr: 1
+  fri: 1
