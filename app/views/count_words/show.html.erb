@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @count_word.title %>
+</p>
+
+<p>
+  <strong>Text to count:</strong>
+  <%= @count_word.text_to_count %>
+</p>
+
+<p>
+  <strong>Text to count:</strong>
+  <%= @count_word.count_word %>
+</p>
+<%= link_to 'Edit', edit_count_word_path(@count_word) %> |
+<%= link_to 'Back', count_words_path %>

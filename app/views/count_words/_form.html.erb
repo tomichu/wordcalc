@@ -1,0 +1,27 @@
+<%= form_for(count_word) do |f| %>
+  <% if count_word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(count_word.errors.count, "error") %> prohibited this count_word from being saved:</h2>
+
+      <ul>
+      <% count_word.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text_to_count %>
+    <%= f.text_area :text_to_count %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

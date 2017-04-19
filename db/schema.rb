@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412171357) do
+ActiveRecord::Schema.define(version: 20170418034136) do
+
+  create_table "count_words", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text_to_count"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "gw_calculations", force: :cascade do |t|
     t.string   "course"
